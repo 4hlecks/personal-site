@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        form-field {
+            display: block;
+
+            br {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Alex Atienza</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Me</h1>
+        <form action="https://httpbin.org/get" method="get">
+            <form-field>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name_field" placeholder="Your Name">
+                
+            </form-field>
+
+            <form-field>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email_field" placeholder="Your Email">
+                <br>
+            </form-field>
+
+            <form-field>
+                <label for="inquiry_field">Inquiry:</label>
+                <select name="inquiry" id="inquiry_field" multiple>
+                    <option>General</option>
+                    <option>Project</option>
+                    <option>Job</option>
+                    <option>Partnership</option>
+                    <option>Question</option>
+                </select>
+                <br>
+            </form-field>
+
+            <form-field>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message_field">Type a message.</textarea>
+                <br>
+            </form-field>
+
+            <input type="submit">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Alex Atienza</p>
+    </footer>
+</body>
+</html>

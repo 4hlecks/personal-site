@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <style>
+        project-category {
+            display: block;
+            margin-bottom: 50px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Alex Atienza</a>
+            <a href="index.html">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="media/alex-atienza-logo.png 500w">
+                    <img src="media/atienza-logo.png"
+                        alt="Alex Atienza Logo"
+                        width="200"
+                        height="50">
+                </picture>
+            </a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="resume.html">Resume</a>
@@ -17,7 +31,13 @@
     </header>
     <main>
         <h1>Projects</h1>
-        <section>
+        <search>
+            <form>
+                <input name="project-search" id="project-search" type="search" placeholder="Search projects...">
+                <button type="submit">Search</button>
+            </form>
+        </search>
+        <project-category>
             <hgroup>
                 <h2>Technical</h2>
                 <p>
@@ -53,15 +73,18 @@
                     </ul>
                 </details>
             </section>
-        </section>
-        <section>
+        </project-category>
+        
+        <hr>
+        
+        <project-category>
             <hgroup>
                 <h2>Creative</h2>
                 <p>
                     My creative projects, consisting mostly of graphics and videos.
                 </p>
             </hgroup>
-        </section>
+        </project-category>
     </main>
     <footer>
         <p>&copy; 2025 Alex Atienza</p>

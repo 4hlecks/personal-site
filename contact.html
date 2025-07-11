@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <style>
-        form-field {
-            display: block;
-
-            br {
-                display: none;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Alex Atienza</a>
+            <a href="index.html">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="media/alex-atienza-logo.png 500w">
+                    <img src="media/atienza-logo.png"
+                        alt="Alex Atienza Logo"
+                        width="200"
+                        height="50">
+                </picture>
+            </a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="resume.html">Resume</a>
@@ -27,19 +26,15 @@
     <main>
         <h1>Contact Me</h1>
         <form action="https://httpbin.org/get" method="get">
-            <form-field>
+            <fieldset>
+                <legend>Contact Form</legend>
+                <p>Please fill out the form below to get in touch with me.</p>
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name_field" placeholder="Your Name">
-                
-            </form-field>
-
-            <form-field>
+                <br>
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email_field" placeholder="Your Email">
                 <br>
-            </form-field>
-
-            <form-field>
                 <label for="inquiry_field">Inquiry:</label>
                 <select name="inquiry" id="inquiry_field" multiple>
                     <option>General</option>
@@ -49,15 +44,11 @@
                     <option>Question</option>
                 </select>
                 <br>
-            </form-field>
-
-            <form-field>
                 <label for="message">Message:</label>
                 <textarea name="message" id="message_field">Type a message.</textarea>
                 <br>
-            </form-field>
-
-            <input type="submit">
+                <input type="submit">
+            </fieldset>
         </form>
     </main>
     <footer>

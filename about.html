@@ -8,7 +8,15 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">Alex Atienza</a>
+            <a href="index.html">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="media/alex-atienza-logo.png 500w">
+                    <img src="media/atienza-logo.png"
+                        alt="Alex Atienza Logo"
+                        width="200"
+                        height="50">
+                </picture>
+            </a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="resume.html">Resume</a>
@@ -18,21 +26,61 @@
     <main>
         <article>
             <h1>About</h1>
-            <button>User Manual</button>
-            <img src="media/headshot-retreat.png"
+            <dialog open>
+                <form method="dialog">
+                    <p>Would you like to switch to the user manual?</p>
+                    <button value="yes">Yes</button>
+                    <button value="no">No</button>
+                </form>
+            </dialog>
+            <figure>
+                <img src="media/headshot-retreat.png"
                 alt="Headshot of Alex Atienza"
                 width="300"
                 height="345">
-            <p>Here is some meaningful text about Alex Atienza. Just some more text to fill the space.</p>
-            <p>My favorite color is <span style="color:blue">blue</span>.</p>
-            <aside>Here is some irrelevant text not corresponding to this page.</aside>
+                <figcaption>Picture of Alex Atienza</figcaption>
+            </figure>
+            <pre>Here is some meaningful text about <dfn>Alex Atienza</dfn>. <del>Just some more text to fill the space.</del></pre>
+            <p>My favorite color is <ins><span style="color:blue">blue</span></ins>.</p>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" fill="blue" />
+            </svg>
+            <aside>He also likes a few other colors with the ranking below.</aside>
+            <ol>
+                <li>Blue</li>
+                <li>Gray</li>
+                <li>Brown</li>
+            </ol>
+            <form action="https://httpbin.org/get" method="get">
+                <label for="favorite_color">What's your favorite color?</label>
+                <input list="colors" type="text" id="favorite_color" name="favorite_color">
+                <datalist id="colors">
+                    <option value="Blue">
+                    <option value="Gray">
+                    <option value="Brown">
+                    <option value="Red">
+                    <option value="Green">
+                </datalist>
+                <input type="submit">
+            </form>
+
+            <p>Here is one of my favorite quotes from Bruce Lee:</p>
+            <blockquote cite="https://www.brainyquote.com/quotes/bruce_lee_394186">
+                Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it.
+            </blockquote>
+
         </article>
 
         <section>
             <hgroup>
                 <h2>Background</h2>
-                <p>Alex is expected to graduate June 2026 from University of California San Diego.</p>
+                <p>Alex is expected to graduate June 2026 from <abbr title="University of California San Diego">UCSD</abbr>.</p>
             </hgroup>
+            <p>Here is where <abbr title="University of California San Diego">UCSD</abbr> is located.</p>
+            <address>
+                9500 Gilman Dr, <br>
+                La Jolla, CA 92093
+            </address>
             <figure>
                 
             </figure>
@@ -46,10 +94,14 @@
             </audio>
         </section>
 
-        <section>
+        <div>
             <h2>Social Media</h2>
                 <table>
                     <caption>Stay Updated!</caption>
+                    <colgroup>
+                        <col span="2">
+                        <col span="2">
+                    </colgroup>
                     <thead>
                         <tr>
                             <th>Platform</th>
@@ -71,7 +123,11 @@
                         </tr>
                     </tbody>
                 </table>
-        </section>
+        </div>
+
+        <div>
+            <iframe src="contact.html" width="100%" height="500px" title="Contact Form"></iframe>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Alex Atienza</p>
